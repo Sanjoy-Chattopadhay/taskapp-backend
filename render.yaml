@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: taskapp-backend
+    env: java
+    buildCommand: "./mvnw clean install"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: "jdbc:postgresql://ep-divine-scene-aea4lw4i-pooler.c-2.us-east-2.aws.neon.tech/neondb?user=neondb_owner&password=npg_MXEG06OZSJIn&sslmode=require&channelBinding=require"
